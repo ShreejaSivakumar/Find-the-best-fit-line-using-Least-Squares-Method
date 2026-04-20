@@ -1,4 +1,10 @@
 # Implementation of Univariate Linear Regression
+
+# Date : 20/04/26
+
+# NAME : SHREEJA R S
+# REF.NO : 25017561
+
 ## AIM:
 To implement univariate Linear Regression to fit a straight line using least squares.
 
@@ -20,13 +26,71 @@ To implement univariate Linear Regression to fit a straight line using least squ
 ```
 /*
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: 
-RegisterNumber:  
+Developed by:  SHREEJA R S 
+RegisterNumber:  2501756<img width="855" height="677" alt="Screenshot 2026-04-20 092827" src="https://github.com/user-attachments/assets/58347eac-a7bc-4c5c-9bff-c75c5440cc6e" />
+<img width="855" height="677" alt="Screenshot 2026-04-20 092827" src="https://github.com/user-attachments/assets/66d287b9-3bca-4249-a5a5-104ef9335e50" />
+1
 */
+
+#Import libraries
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+#Sample Data(X: input , Y: output)
+
+X=np.array([1,2,3,4,5])
+Y=np.array([2,4,6,8,10])
+
+#Number of Data Points
+
+n=len(X)
+
+#Calculate Mean
+
+x_mean=np.mean(X)
+y_mean=np.mean(Y)
+
+#calculate Slope(m) and Intercept(b)
+
+numerator=np.sum((X - x_mean)*(Y - y_mean))
+denominator=np.sum((X - x_mean)**2)
+
+m=numerator/denominator
+b=y_mean - m*x_mean
+
+#Print Slope and Intercept Values
+
+print("Slope(m):",m)
+print("Intercept(b)",b)
+
+#Straight line equation(Predicted values)
+
+Y_pred = m*X + b
+
+x = input("Enter value: ")
+yy = m * float(x) + b
+print("Value:", yy)
+
+#Program to display output(Plotting)
+
+plt.scatter(X,Y,label="Data Points")
+plt.plot(X,Y_pred,label="Best Fit Line")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.title("Univariate Linear Regression")
+plt.show()
+
+
 ```
 
 ## Output:
+
 ![best fit line](sam.png)
+
+<img width="855" height="677" alt="Screenshot 2026-04-20 092827" src="https://github.com/user-attachments/assets/10062868-5809-4d0a-8c0b-f8865eff64d1" />
+
 
 
 ## Result:
