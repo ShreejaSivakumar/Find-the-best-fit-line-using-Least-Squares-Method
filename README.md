@@ -1,4 +1,10 @@
 # Implementation of Univariate Linear Regression
+
+# DATE : 20/04/26
+
+# NAME : SHREEJA R S
+# REF.NO : 25017561
+
 ## AIM:
 To implement univariate Linear Regression to fit a straight line using least squares.
 
@@ -78,7 +84,7 @@ plt.show()
 ```
 
 ## Output:
-![best fit line](sam.png)
+
 
 <img width="855" height="677" alt="image" src="https://github.com/user-attachments/assets/2a01438f-8645-452b-b1bc-fd3a6a6d9ce4" />
 
